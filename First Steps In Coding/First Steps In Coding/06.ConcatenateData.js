@@ -5,3 +5,4 @@ function concatenateData(fname, lname, age, town){
 }
 
 concatenateData("Maria", "Ivanova", 20, "Sofia");
+concatenateData("Sofia", "Ivanova", 36, "Varna");
