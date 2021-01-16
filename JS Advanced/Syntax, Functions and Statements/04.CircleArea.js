@@ -8,7 +8,7 @@ function solve(input) {
 
         console.log(result.toFixed(2));
     } else {
-        console.log(`We can not calculate the circle area, because we receive a {type of argument}.`);
+        console.log(`We can not calculate the circle area, because we receive a ${inputType}.`);
     }
 }
 

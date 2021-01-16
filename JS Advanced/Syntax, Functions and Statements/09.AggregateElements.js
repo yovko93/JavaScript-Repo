@@ -9,7 +9,7 @@ function solve(arr){
         str += arr[i];
     }
     console.log(sum);
-    console.log(sumOfInverseValues.toFixed(4));
+    console.log(sumOfInverseValues);
     console.log(str);
 }
 
