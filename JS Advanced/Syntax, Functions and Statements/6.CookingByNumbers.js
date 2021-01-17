@@ -1,8 +1,8 @@
-function solve(input) {
-    let number = Number(input[0]);
+function solve(...params) {
+    let number = Number(params[0]);
 
-    for (let i = 1; i < input.length; i++) {
-        let operation = input[i];
+    for (let i = 1; i < params.length; i++) {
+        let operation = params[i];
 
         if (operation === 'chop') {
             number /= 2;
@@ -20,5 +20,5 @@ function solve(input) {
     }
 }
 
-solve(['32', 'chop', 'chop', 'chop', 'chop', 'chop']);
-solve(['9', 'dice', 'spice', 'chop', 'bake', 'fillet']);
+solve('32', 'chop', 'chop', 'chop', 'chop', 'chop');
+solve('9', 'dice', 'spice', 'chop', 'bake', 'fillet');
