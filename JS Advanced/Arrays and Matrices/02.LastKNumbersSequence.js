@@ -10,9 +10,8 @@ function solve(n, k) {
 
     }
 
-    
+
     console.log();
 }
 
-solve();
-
+console.log(solve(6, 3));
