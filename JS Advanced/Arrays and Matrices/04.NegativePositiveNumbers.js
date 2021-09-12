@@ -1,4 +1,4 @@
-//function
+/* function */
 // function solve(arr) {
 //    let result = [];
 
@@ -16,6 +16,7 @@
 // solve([7, -2, 8, 9]);
 // solve([3, -2, 0, -1]);
 
+//===========================================
 
 /* Arrow solution */
 // let specialSort = arr => {
