@@ -10,4 +10,14 @@ function oddPositions(numbers) {
     return result.reverse();
 }
 
+/* second way
+function solve(arr) {
+    return arr
+    .filter((x,i) => i % 2 != 0)
+    .map(x => x + x)
+    .reverse()
+    .join(' ');
+}
+*/
+
 console.log(oddPositions([10, 15, 20, 25]));
