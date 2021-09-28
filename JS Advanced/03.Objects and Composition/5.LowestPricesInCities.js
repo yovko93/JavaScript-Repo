@@ -1,26 +1,23 @@
-function lowestPricesInCities(input) {
-    let log = {};
-
-    while (input.length) {
-        let sale = input.shift();
-        let [town, product, price] = sale.split(' | ');
-
-        if (!log[product]) {
-            log[product] = { town, price: Number(price) };
-        } else {
-            log[product] = log[product].price <= Number(price) 
-            ? log[product] 
-            : { town, price: Number(price) };
+function lowestPricesInCities(array) {
+    let products = new Map();
+    for (let sentance of array) {
+        let [town, product, price] = sentance.split(" | ");
+        if (!products.has(product)) {
+            products.set(product, new Map());
         }
+        products.get(product).set(town, Number(price));
     }
-
-    let result = [];
-
-    for (const product in log) {
-        result.push(`${product} -> ${log[product].price} (${log[product].town})`)
+    for (let [key, value] of products) {
+        let lowest = ([...value].reduce(function (a, b) {
+            if (a[1] < b[1]) {
+                return a;
+            } else if (a[1] > b[1]) {
+                return b;
+            }
+            return a;
+        }));
+        console.log(`${key} -> ${lowest[1]} (${lowest[0]})`);
     }
-
-    return result.join('\n');
 }
 
 console.log(lowestPricesInCities(['Sample Town | Sample Product | 1000',
