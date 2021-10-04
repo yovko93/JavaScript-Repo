@@ -7,3 +7,8 @@ function colorize() {
 
     [...document.querySelectorAll('table tr:nth-child(even)')].forEach(e => e.style.backgroundColor = 'teal');
 }
+
+// 2nd way
+// function colorize() {
+//     Array.from(document.querySelectorAll('table tr:nth-child(even)')).forEach(r => r.style.backgroundColor = 'teal');
+// }
