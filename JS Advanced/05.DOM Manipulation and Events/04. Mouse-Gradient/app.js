@@ -9,3 +9,15 @@ function attachGradientEvents() {
         output.textContent = `${percent}%`
     };
 }
+
+//=================================
+// function attachGradientEvents() {
+//     document.getElementById('gradient').addEventListener('mousemove', onMove);;
+//     let result = document.getElementById('result');
+
+//     function onMove(e) {
+//         const percent = Math.floor(e.offsetX / e.currentTarget.offsetWidth * 100);
+
+//         result.textContent = `${percent}%`;
+//     }
+// }
