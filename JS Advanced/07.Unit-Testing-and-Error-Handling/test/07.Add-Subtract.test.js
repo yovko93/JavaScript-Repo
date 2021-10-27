@@ -43,5 +43,11 @@ describe('createCalculator functionality', () => {
         let value = calc.get();
         expect(value).to.be.NaN;
     });
+
+    it('Should return NaN for subtract(string)', () => {
+        calc.subtract('string');
+        let value = calc.get();
+        expect(value).to.be.NaN;
+    })
 });
 
