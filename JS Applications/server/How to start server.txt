@@ -1,0 +1,4 @@
+1. Go to local folder and type 'cmd'
+2. Then type on the opened console 'node server.js'
+3. In VS Code open in integrated terminal
+4. Type 'lite-server'
