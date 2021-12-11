@@ -17,7 +17,8 @@ h2 {
     position: relative;
 }
 
-.main-form input[type="text"], .main-form input[type="password"] {
+.main-form input[type="text"],
+.main-form input[type="password"] {
     padding: 4px 8px;
     display: block;
     width: 200px;
@@ -72,4 +73,13 @@ h2 {
 .error {
     text-align: center;
     color: red
+}
+
+a.guest,
+a.user {
+    display: none;
+}
+
+#views {
+    display: none;
 }
