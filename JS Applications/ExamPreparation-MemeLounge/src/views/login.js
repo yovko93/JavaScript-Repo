@@ -1,6 +1,7 @@
 import { html } from '../../node_modules/lit-html/lit-html.js';
 
 import { login } from '../api/data.js';
+import { notify } from '../notification.js';
 
 const loginTemplate = (onSubmit) => html`
 <section id="login">
@@ -29,9 +30,17 @@ export async function loginPage(ctx) {
         const email = formData.get('email').trim();
         const password = formData.get('password').trim();
 
-        await login(email, password);
+        try {
+            if (!email || !password) {
+                throw new Error('All fields are required!');
+            }
 
-        ctx.setUserNav();
-        ctx.page.redirect('/catalog');
+            await login(email, password);
+
+            ctx.setUserNav();
+            ctx.page.redirect('/catalog');
+        } catch (error) {
+            notify(error.message);
+        }
     }
 }
