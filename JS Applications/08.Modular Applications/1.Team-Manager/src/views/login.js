@@ -8,7 +8,7 @@ const loginTemplate = (onSubmit, errorMsg) => html`
         <header class="pad-med">
             <h1>Login</h1>
         </header>
-        <form @submit=${onsubmit} id="login-form" class="main-form pad-large">
+        <form @submit=${onSubmit} id="login-form" class="main-form pad-large">
             ${errorMsg ? html`<div class="error">${errorMsg}</div>` : ''}
             <label>E-mail: <input type="text" name="email"></label>
             <label>Password: <input type="password" name="password"></label>
